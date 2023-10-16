@@ -1,0 +1,120 @@
+/*PORTFOLIO*/
+.galeria {
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2);
+    overflow: hidden;
+    img {
+        border-radius: 6px;
+        &:hover {
+            opacity:.8;
+            transform:scale(1.05,1.05);
+        }
+    }
+    .card-body {
+        padding: 0;
+        .overlay-portfolio {
+            position:absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            transition: .5s ease;
+            color: transparent;
+            background-color:$violeta;
+            opacity: 0; 
+            &:hover {
+                padding:5rem 2rem 2rem 1rem;
+                border: 8px solid $violeta;
+                opacity:.9;
+                height: auto;
+                width: 100%;
+                margin: auto;
+                transform-origin: center center;
+                color: transparent;
+                background-color: white;
+                border-radius: 15px;
+                text-align: center;
+                .card-title {
+                    color:$verde;
+                    text-transform: uppercase;
+                    margin-top:6rem;
+                    margin-bottom: .2rem;
+                }
+                p {
+                    color:$violeta;
+                    font-weight: bold;
+                } 
+            }
+        }
+    }
+}      
+.row-cols-md-3 {
+    .modal {
+        width: 100%;
+        height: 100%;
+        .modal-dialog {
+            margin:1.75rem auto;
+            .modal-content {
+                .modal-header {
+                    background-color: $verde;
+                    .modal-title {
+                        font-weight: bold;
+                    }
+                }
+                .modal-body {
+                    padding: 2rem 2rem 0rem 2rem ;
+                    .lead {
+                        font-size:1.2rem ;
+                        font-weight: bold;
+                        color: $verde;
+                    }
+                    .texto-modal {
+                        display: grid;
+                        grid-gap: 10px;
+                        grid-template-columns: repeat(6,auto);
+                        max-width: 100%;                    
+                        .numer-grid-model {
+                            width: 20px;
+                            color: $verde;
+                            justify-self: end;
+                        }
+                        .texto-grid-model {
+                            font-weight: bold;
+
+                        }
+                        
+                    }
+                    em {
+                        margin: auto;
+                    }
+                }
+                .modal-footer {
+                    background-color:$gris-claro;
+                    .redes-portfolio {
+                        margin: auto;
+                        border-radius: 15px;
+                        padding-right:20px; 
+                        padding-left:15px;
+                        padding-right:15px;
+                        &:hover {
+                            background-color: $verde; 
+                        }
+                        div {
+                            font-size: 2rem;
+                            @each $name, $color in $colors {
+                                &.color-#{$name} {color:$color;       
+                                }
+                            }
+                        }
+                    } 
+                }
+            }    
+        }
+    } 
+    & > * {
+        max-width: 100%; 
+    }
+}

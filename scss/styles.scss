@@ -1,0 +1,125 @@
+:root { 
+    font-size: 17px;
+}
+// _variables.scss
+@import "variables";
+
+@mixin oscuridad($color) {
+    border: 3px solid $color;
+    background-color: lighten($violeta, 37%);
+}
+//@mixin sizes($marginB,$marginR, $borderR,$padding)//
+@mixin sizes($marginB,$marginR, $borderR,$padding) {
+   margin-bottom:$marginB;
+   margin-right: $marginR;
+   border-radius: $borderR;
+   padding: $padding;
+}
+@mixin botonForm ($paddingBtn, $gris-claro,$violeta,$border) {
+    padding:$paddingBtn;
+    background-color:$gris-claro;
+    color:$violeta;
+    border: $border;
+}
+//Carrousel color Arrows
+.color-icon {
+    color: $gris-oscuro;
+    font-size: 3rem;
+    &:hover {
+        color: black;
+    } 
+    &:focus {
+        color: $verde;
+    } 
+}
+
+.bold-color {
+    color: $violeta;
+    font-weight: bold;
+}
+h1 {
+    font-family:"magra";
+    text-transform: uppercase;
+    color:$violeta;
+    font-size: 3rem; 
+}
+
+h2 {
+    font-family:"magra";
+    text-transform: uppercase;
+    color:$violeta; 
+    font-size: 2.7rem;
+}
+
+h3 {
+    font-family:"magra";
+    text-transform: uppercase;
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-family:"magra";
+    font-size: 1.35rem;
+}
+
+h5 {
+    font-size: 1.08rem; 
+}
+  
+h6 {
+    font-size: 0.9rem; 
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+    text-decoration: none;
+    }
+}
+
+body {
+    position: relative;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background-color:$gris-claro;
+    line-height: 1.7;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    margin:auto;
+}
+
+.color-white {
+    background-color: white;
+    padding-top: 4rem;
+    padding-bottom:6rem;
+}
+
+.navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
+    padding-left: .5rem;
+    color: rgba(0, 0, 0, 0.9);
+    border-radius: 15px; 
+}
+// _header.scss
+@import "header";
+
+/* PÁGINAS */
+// _index.scss
+@import "index";
+// _sobremi.scss
+@import "sobremi";
+// _portfolio.scss
+@import "portfolio";
+// _servicios.scss
+@import "servicios";
+// _contacto.scss/ modal header
+@import "contacto";
+// _footer.scss
+@import "footer";
+// _responsive.scss
+@import "responsive";
+
+
+
+

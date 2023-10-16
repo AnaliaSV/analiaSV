@@ -1,0 +1,114 @@
+/*CONTACTO*/
+.container-form {
+    background-color:#E6E7E8;
+    display: block;
+    margin: auto;	
+    padding: 20px;
+    border: 15px solid $violeta;
+    border-radius:15px;
+    box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2);
+    max-width: 600px;
+   .flex-form-contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    p {
+        margin-bottom: 5px;
+    }
+    input {
+        border-radius:15px;
+        border: 2px solid $violeta;
+        background-color:white;
+    }
+       
+    input:focus {
+        outline:0;
+        border:2px solid $violeta;
+        background-color: $verde;
+        color: white;
+    }
+}
+
+.nombre-form {
+    background-color: rgba(106, 103, 206, 0.3);	
+    @include sizes(10px,5px, 15px, 10px);
+    .form-control {
+        padding:0.475rem 1rem;
+    }
+}
+.email-form {
+    background-color: rgba(106, 103, 206, 0.3);
+    @include sizes(10px,5px, 15px, 10px);
+    .form-control {
+        padding:0.475rem 1rem;
+    }
+}
+.telefono-form {
+    background-color: rgba(106, 103, 206, 0.3);
+    @include sizes(10px,5px, 15px, 10px);
+    .form-group {
+        input {
+            border: 2px solid $violeta;
+            border-radius:15px;
+        }    
+    }
+    input:focus {
+        outline:0;
+        border:2px solid $violeta;
+        background-color: $verde;
+        color: white;
+    }
+}
+.estado-civil-form {
+    background-color: rgba(106, 103, 206, 0.3);	
+    @include sizes(10px,5px, 15px, 10px);
+    max-width: 300px;
+    select {
+        border-radius:10px;
+        padding: 5px;
+        border: none;
+    }
+}
+.textarea-form {
+    background-color: rgba(106, 103, 206, 0.3);	
+    @include sizes(10px,5px, 15px, 10px);
+    textarea {
+        border-radius:15px;
+        padding: 2px;
+        border:none;
+    }
+}
+    .limpiar-formulario {
+        @include botonForm (10px, $gris-claro,$violeta,2px solid #6A67CE);
+        cursor: pointer;
+        border-radius: 150px;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin: 5px;
+        &:hover {
+        background-color: $verde; 
+        border: 2px solid $verde;
+        color:white;
+       }
+    } 
+    .enviar-formulario {
+        @include botonForm (10px,$gris-claro,$violeta,2px solid #6A67CE);
+        cursor: pointer;
+        border-radius: 150px;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin: 5px;
+        &:hover {
+        background-color: $verde; 
+        border: 2px solid $verde;
+        color:white;
+        }
+    }
+    a {
+        margin:10px;
+        display:block;
+        text-align: start;
+    }
+    
+}

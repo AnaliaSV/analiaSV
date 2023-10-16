@@ -1,0 +1,105 @@
+/* HEADER*/
+.bg-color {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index:1;
+    width:100%;
+    color:black;
+    @each $name, $color in $colors {
+        &.color-#{$name} {background-color:($color);
+        }
+    }
+}
+.navbar {
+    .navbar-nav{
+        list-style: none;
+        font-family: "lato";
+        font-weight: bold;
+        font-size:1rem;
+        .btn {
+            border:0px;
+            font-weight: bold;
+            line-height:1.7;
+        } 
+        a {
+            text-transform: uppercase;  
+            display: block; 
+            }  
+        .nav-link { 
+            padding:10px;
+            border-radius: 15px;
+            color: white;
+            @each $name, $color in $colors {
+                &.color-#{$name} {
+                    background-color:($color);
+                }
+                &:hover,
+                &[aria-expanded="true"] {
+                    color: white;
+                    border-color: $verde;
+                    background-color: $verde; 
+                }
+                &:active {
+                    background-color: $verde;
+                    box-shadow: 0 2px #666;
+                    transform: translateY(2px);
+                }
+                &:focus {
+                    color: white;
+                    background-color: $verde;
+                }
+            }
+        }   
+    }   
+    .navbar-toggler{
+        background-color: $verde;
+        padding: 1rem;
+        cursor: pointer;
+        span {
+            font-size: 2rem;
+        }
+        @each $name, $color in $colors {
+            &.color-#{$name} {color:$color;       
+                &:hover,
+                &[aria-expanded="true"] {
+                color: white;
+                } 
+                }
+        }
+    }
+    .navbar-collapse {
+        flex-grow: 0;
+    } 
+    .navbar-expand-lg{
+        justify-content: center;
+    }
+    .dropdown-menu {
+        background-color:white;
+    }
+
+}
+.dropdown-item {
+    background-color:white;
+    &:hover {
+    background-color:$verde;    
+    }
+}
+
+.modal-contacto {
+    .modal-content{
+        background-color:transparent;
+        border: 0px;
+        .modal-header{
+            border-bottom:0px;
+             .close {
+            background-color: $verde;
+            opacity: 100;
+                &:hover{
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}

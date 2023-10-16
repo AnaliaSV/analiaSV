@@ -1,0 +1,126 @@
+//----------------------SOBREMI----------------------//
+.sobremi {
+    justify-content: center;
+    .sobremi-texto {
+        border-radius: 15px;
+        box-shadow: 4px 4px 8px 0 rgba(0,0,0,.2);
+        background-color: white;
+        padding: 1rem 2rem;
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        max-width: 100%;
+        h2 {
+            color:$violeta;
+        }
+        h5 {
+            line-height: 1.7;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        .sobremi-footer {
+            background-color: #fff;
+            border:0;
+            .redes-sobremi {
+                display: flex;
+                align-items: center;
+                justify-content:space-around;
+                .redes-iconos {
+                    border-radius: 15px;
+                    padding-right:20px; 
+                    padding-left:15px;
+                    padding-right:15px;
+                    &:hover {
+                        background-color: $verde; 
+                    }
+                    div { 
+                        font-size: 2rem;
+                        @each $name, $color in $colors {
+                            &.color-#{$name} {color:$color;       
+                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .sobremi-imagen {
+        .img-fluid {
+            border-radius: 15px;
+        }            
+    }
+}
+
+.habilidades-titulo {
+    text-align: center;
+    }     
+.row-habilidades {
+    justify-content: space-around;
+     .habilidades-left {
+        margin-top:2rem ;
+        margin-left: 2rem;
+        .grid-lista-sobremi {
+            display: grid;
+            grid-template-columns: repeat(6,auto);
+            grid-auto-rows:3rem;
+            margin: auto;
+            grid-gap: 13px;
+            .lista-grid {
+                grid-column-start:2;
+                grid-column-end:7;
+                display: flex;
+                justify-content: start;
+                text-align: center;
+                align-items:center;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+            .lista-grid-numeracion{
+                font-weight: bold;
+                display: flex;
+                font-size: 1.1rem;
+                justify-content: center;
+                color:white;
+                text-align: center;
+                align-items:center;
+                font-weight: bold;
+                .div-verde {
+                background-color: $verde;
+                width: 2rem;
+                }
+            }
+        }
+    }
+      
+ .habilidades-right {
+   margin: auto;
+   margin-top: 2rem;
+
+        .card-deck {
+            .card {
+                margin-bottom: 30px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            .card-habilidades {
+                border:3px solid $verde;
+                width:200px;
+                height: 200px;
+                .card-body {
+                    .card-title {
+                        font-size: 4rem;
+                        color: $verde;
+                        text-align: center;
+                    }
+                }
+                .card-text {
+                    font-size: 1.1rem;
+                    font-weight: bold;
+                    text-align: center;
+                    line-height: 1.1;
+                }
+
+            }
+
+        }
+    }
+}
