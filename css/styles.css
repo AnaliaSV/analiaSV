@@ -507,7 +507,10 @@ section .carousel-index .carousel-item .carousel-texto {
         text-align: center;
         align-items: center;
         font-size: 1rem;
-        font-weight: bold; }
+        font-weight: bold;
+        text-align: start;
+        line-height: 23px;
+      }
       .row-habilidades .habilidades-left .grid-lista-sobremi .lista-grid-numeracion {
         font-weight: bold;
         display: flex;
