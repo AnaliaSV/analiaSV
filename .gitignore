@@ -1,1 +1,7 @@
+# Dependencias de Node.js
 node_modules
+
+# Carpeta de imágenes
+/images/fiserv/
+
+/servicios.html
